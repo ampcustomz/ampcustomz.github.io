@@ -137,7 +137,15 @@
     <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
       <div class="cart-head"><h2>YOUR CART</h2><button id="cartClose" aria-label="Close cart">×</button></div>
       <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is waiting for a little voltage.</p></div>
-      <div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">$0</strong></div><button class="button button-dark checkout">Checkout <span>↗</span></button></div>
+      <div class="cart-footer">
+        <form class="discount-form" id="discountForm">
+          <label for="discountCode">Discount code</label>
+          <div class="discount-entry"><input id="discountCode" name="discountCode" type="text" placeholder="FREEDISCOUNT20" autocomplete="off" /><button type="submit">Apply</button></div>
+          <p class="discount-message" id="discountMessage" role="status" aria-live="polite"></p>
+        </form>
+        <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><div id="discountLine" hidden><span>Discount</span><strong id="cartDiscount">-$0.00</strong></div><div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div></div>
+        <button class="button button-dark checkout">Checkout <span>↗</span></button>
+      </div>
     </aside>
     <div class="drawer-backdrop" id="backdrop"></div>
     <section class="checkout-modal" id="checkoutModal" aria-labelledby="checkoutTitle" aria-hidden="true">

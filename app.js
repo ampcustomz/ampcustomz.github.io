@@ -11,6 +11,14 @@ const checkoutBackdrop = document.querySelector('#checkoutBackdrop');
 const checkoutForm = document.querySelector('#checkoutForm');
 const cardFields = document.querySelector('#cardFields');
 const checkoutResult = document.querySelector('#checkoutResult');
+const discountForm = document.querySelector('#discountForm');
+const discountCodeInput = document.querySelector('#discountCode');
+const discountMessage = document.querySelector('#discountMessage');
+const cartSubtotal = document.querySelector('#cartSubtotal');
+const cartDiscount = document.querySelector('#cartDiscount');
+const discountLine = document.querySelector('#discountLine');
+const discountCodes = { FREEDISCOUNT20: 0.2 };
+let appliedDiscount = null;
 
 function toggleCheckout(open) {
   checkoutModal.classList.toggle('open', open);
@@ -20,8 +28,13 @@ function toggleCheckout(open) {
 
 function renderCart() {
   cartCount.textContent = cart.length;
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
-  cartTotal.textContent = `$${total}`;
+  const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+  const discount = appliedDiscount ? subtotal * appliedDiscount.rate : 0;
+  const total = subtotal - discount;
+  cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+  cartDiscount.textContent = `-$${discount.toFixed(2)}`;
+  cartTotal.textContent = `$${total.toFixed(2)}`;
+  discountLine.hidden = !appliedDiscount;
   cartItems.innerHTML = cart.length ? cart.map((item, index) => `
     <div class="cart-item"><div>${item.name}<small>$${item.price}</small></div><button class="remove" data-index="${index}">Remove</button></div>
   `).join('') : '<p class="empty-cart">Your cart is waiting for a little voltage.</p>';
@@ -30,6 +43,23 @@ function renderCart() {
     renderCart();
   }));
 }
+
+discountForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const code = discountCodeInput.value.trim().toUpperCase();
+  const rate = discountCodes[code];
+  if (!rate) {
+    appliedDiscount = null;
+    discountMessage.textContent = 'That code is not valid.';
+    discountMessage.className = 'discount-message error';
+    renderCart();
+    return;
+  }
+  appliedDiscount = { code, rate };
+  discountMessage.textContent = `${code} applied — 20% off.`;
+  discountMessage.className = 'discount-message success';
+  renderCart();
+});
 
 function toggleCart(open) {
   drawer.classList.toggle('open', open);
@@ -90,6 +120,10 @@ checkoutForm.addEventListener('submit', event => {
   checkoutForm.hidden = true;
   checkoutResult.hidden = false;
   cart.length = 0;
+  appliedDiscount = null;
+  discountCodeInput.value = '';
+  discountMessage.textContent = '';
+  discountMessage.className = 'discount-message';
   renderCart();
 });
 document.querySelector('#checkoutDone').addEventListener('click', () => toggleCheckout(false));
