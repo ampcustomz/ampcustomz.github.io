@@ -56,7 +56,7 @@ discountForm.addEventListener('submit', event => {
     return;
   }
   appliedDiscount = { code, rate };
-  discountMessage.textContent = `${code} applied — 20% off.`;
+  discountMessage.textContent = 'Discount applied — 20% off.';
   discountMessage.className = 'discount-message success';
   renderCart();
 });
