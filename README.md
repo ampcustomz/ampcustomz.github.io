@@ -1,4 +1,4 @@
-## Hi there 👋
+Hello i am a small ebike brand
 
 <!--
 **ampcustomz/AmpCustomz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
