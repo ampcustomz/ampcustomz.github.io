@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Custom decals and premade stickers for bikes and e-bikes." />
+    <title>AmpCustomz | Decals for bikes with amps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">FREE SHIPPING ON ORDERS OVER $30</div>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="AmpCustomz home"><span>AMP</span><i>CUSTOMZ</i></a>
+      <nav aria-label="Main navigation">
+          <a href="#shop">Shop decals</a>
+        <a href="#clothing">Clothing</a>
+        <a href="#custom">Custom work</a>
+        <a href="#story">our story</a>
+      </nav>
+      <button class="cart-button" id="cartOpen" aria-label="Open cart">CART <b id="cartCount">0</b></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AMPCUSTOMZ</p>
+          <h1>STICKERS FOR<br /><em>YOUR RIDE.</em></h1>
+          <p class="hero-text">Simple decals for bikes and e-bikes.</p>
+          <a class="button button-dark" href="#shop">Shop decals <span>↘</span></a>
+        </div>
+        <div class="hero-art" aria-label="Colorful custom bike decal collection">
+          <div class="burst">STICK<br />IT<br />GOOD</div>
+          <div class="bike-shape bike-wheel one"></div>
+          <div class="bike-shape bike-wheel two"></div>
+          <div class="bike-frame"></div>
+          <div class="bike-bar"></div>
+          <div class="hero-sticker sticker-red">AMP<br /><small>THE CURRENT</small></div>
+          <div class="hero-sticker sticker-lime">GO<br />LOUD</div>
+          <p class="hero-note">01 / THE VOLTAGE EDIT</p>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Product highlights">
+        <span>UV RESISTANT</span><b>✳</b><span>WATERPROOF</span><b>✳</b><span>MADE TO MOVE</span><b>✳</b><span>PEEL. STICK. SEND IT.</span><b>✳</b>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div><p class="eyebrow">SHOP</p><h2>BIKE <em>DECALS</em></h2></div>
+          <p class="section-intro">$5–15 each.<br />Free shipping over $30.</p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter products">
+          <button class="filter active" data-filter="all">All decals</button>
+          <button class="filter" data-filter="bike">Bike + frame</button>
+          <button class="filter" data-filter="helmet">Helmet</button>
+          <button class="filter" data-filter="custom">Custom</button>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="bike">
+            <div class="product-image product-photo"><img src="images/image.jpeg" alt="AmpCustomz bike decal" /><span class="tag">BIKE DECAL</span></div>
+            <div class="product-info"><div><h3>Custom bike decal</h3><p>Choose your price</p></div><strong>$5–15</strong></div>
+            <button class="add-button" data-name="Custom bike decal" data-details="true">More details... <span>+</span></button>
+          </article>
+          <article class="product-card chi-card" data-category="bike">
+            <div class="product-image chi-logo"><img src="images/IMG_3004.jpeg" alt="Chi Battery logo sticker" /><span class="tag">CHI BATTERY</span></div>
+            <div class="product-info"><div><h3>Chi Battery logo</h3><p>Small logo sticker</p></div><strong>$3</strong></div>
+            <button class="add-button" data-name="Chi Battery logo" data-price="3">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card fox-card" data-category="bike">
+            <div class="product-image fox-logo"><img src="images/IMG_3008.png" alt="Fox 40 decal" /><span class="tag">FOX 40</span></div>
+            <div class="product-info"><div><h3>Fox 40 decals</h3><p>Bike decal</p></div><strong>$7.50</strong></div>
+            <button class="add-button" data-name="Fox 40 decals" data-price="7.50">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card class-two-card" data-category="bike">
+            <div class="product-image class-two-logo"><img src="images/IMG_3010.jpeg" alt="Class two 750 watt sticker" /><span class="tag">CLASS 2</span></div>
+            <div class="product-info"><div><h3>Class two 750 watt sticker</h3><p>Bike decal</p></div><strong>$3</strong></div>
+            <button class="add-button" data-name="Class two 750 watt sticker" data-price="3">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card bikelife-card" data-category="bike">
+            <div class="product-image product-photo"><img src="images/IMG_3011.jpeg" alt="Bikelife is not a crime sticker" /><span class="tag">BIKELIFE</span></div>
+            <div class="product-info"><div><h3>Bikelife is not a crime sticker</h3><p>Bike decal</p></div><strong>$3</strong></div>
+            <button class="add-button" data-name="Bikelife is not a crime sticker" data-price="3">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card" data-category="helmet">
+            <div class="product-image cream"><span class="tag dark-tag">NEW</span><div class="product-mark black">NIGHT<br /><i>RIDER</i></div><div class="mini-star">✦</div></div>
+            <div class="product-info"><div><h3>Night Rider</h3><p>Helmet sticker set</p></div><strong>$14</strong></div>
+            <button class="add-button" data-name="Night Rider" data-price="14">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card" data-category="bike">
+            <div class="product-image blue"><div class="product-mark white">E<br /><i>RIDE</i></div><div class="mini-bolt white-bolt">↯</div><div class="wave">〰</div></div>
+            <div class="product-info"><div><h3>E-Ride Energy</h3><p>Battery + frame kit</p></div><strong>$22</strong></div>
+            <button class="add-button" data-name="E-Ride Energy" data-price="22">Add to cart <span>+</span></button>
+          </article>
+          <article class="product-card" data-category="custom">
+            <div class="product-image lime"><span class="tag dark-tag">CUSTOM</span><div class="product-mark black">YOUR<br /><i>NAME</i></div><div class="mini-star">✹</div></div>
+            <div class="product-info"><div><h3>Your Name Here</h3><p>Personalized decal</p></div><strong>$28</strong></div>
+            <button class="add-button" data-name="Your Name Here" data-price="28">Add to cart <span>+</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="clothing-section" id="clothing">
+        <div class="section-heading">
+          <div><p class="eyebrow">CLOTHING</p><h2>AMP <em>THREADS</em></h2></div>
+          <p class="section-intro">Wear the brand.<br />Built for moving.</p>
+        </div>
+        <div class="product-grid clothing-grid">
+          <article class="product-card tee-card" data-category="clothing">
+            <div class="product-image tee-art"><img src="images/IMG_3013.png" alt="Black Amp Customz tee" /><span class="tag">NEW</span></div>
+            <div class="product-info"><div><h3>Amp Customz tee</h3><p>Everyday heavyweight tee</p></div><strong>$30</strong></div>
+            <button class="add-button" data-name="Amp Customz tee" data-price="30">Add to cart <span>+</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="custom-section" id="custom">
+        <div class="custom-graphic"><span>YOU<br />DRAW<br />THE<br /><i>LINE.</i></span></div>
+        <div class="custom-copy"><p class="eyebrow">MAKE IT YOURS</p><h2>ONE BIKE.<br /><em>ZERO COPYCATS.</em></h2><p>Got a logo, a nickname, or an idea that should live on your ride? Send it our way. We turn rough sketches into tough, ride-ready vinyl.</p><a class="button button-light" href="mailto:ampcustomz@yahoo.com?subject=Custom%20decal%20details">More details <span>↗</span></a></div>
+      </section>
+
+      <section class="story" id="story"><p class="eyebrow">WHY AMPCUSTOMZ</p><h2>BUILT FOR PEOPLE<br />WHO <em>KEEP MOVING.</em></h2><div class="story-stats"><div><strong>01</strong><span>Made in<br />small batches</span></div><div><strong>02</strong><span>Weatherproof<br />by default</span></div><div><strong>03</strong><span>Designed to<br />be noticed</span></div></div></section>
+    </main>
+
+    <footer><a class="logo" href="#top"><span>AMP</span><i>CUSTOMZ</i></a><p>Decals for bikes with voltage.</p><p class="mono">© 2026 AMPCUSTOMZ</p></footer>
+
+    <section class="details-popup" id="detailsPopup" aria-labelledby="detailsTitle" aria-hidden="true">
+      <button id="detailsClose" aria-label="Close details">×</button>
+      <p class="eyebrow">MORE DETAILS</p>
+      <h2 id="detailsTitle">CHECK YOUR <em>EMAIL</em></h2>
+      <p>For pricing and the design you want, email <strong>ampcustomz@yahoo.com</strong>.</p>
+      <button class="button button-dark" id="detailsDone">Got it</button>
+    </section>
+    <div class="details-backdrop" id="detailsBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-head"><h2>YOUR CART</h2><button id="cartClose" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is waiting for a little voltage.</p></div>
+      <div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">$0</strong></div><button class="button button-dark checkout">Checkout <span>↗</span></button></div>
+    </aside>
+    <div class="drawer-backdrop" id="backdrop"></div>
+    <section class="checkout-modal" id="checkoutModal" aria-labelledby="checkoutTitle" aria-hidden="true">
+      <div class="checkout-head"><div><p class="eyebrow">SECURE CHECKOUT</p><h2 id="checkoutTitle">YOUR <em>ORDER</em></h2></div><button id="checkoutClose" aria-label="Close checkout">×</button></div>
+      <form id="checkoutForm">
+        <label>Full name<input name="name" type="text" autocomplete="name" required /></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+        <fieldset class="shipping-fields"><legend>Shipping address</legend><label>Street address<input name="address" type="text" autocomplete="street-address" required /></label><div class="checkout-row"><label>City<input name="city" type="text" autocomplete="address-level2" required /></label><label>State<input name="state" type="text" autocomplete="address-level1" required /></label></div><div class="checkout-row"><label>ZIP code<input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" required /></label><label>Country<input name="country" type="text" autocomplete="country-name" value="United States" required /></label></div></fieldset>
+        <fieldset><legend>Payment method</legend><div class="payment-options"><label><input type="radio" name="payment" value="paypal" checked /> PayPal</label><label><input type="radio" name="payment" value="apple-cash" /> Apple Cash</label><label><input type="radio" name="payment" value="card" /> Credit card</label></div></fieldset>
+        <div class="card-fields" id="cardFields" hidden>
+          <label>Card number<input name="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" /></label>
+          <div class="checkout-row"><label>Expiry<input name="expiry" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" /></label><label>CVV<input name="cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123" /></label></div>
+        </div>
+        <button class="button button-dark checkout-submit" type="submit">Place order <span>↗</span></button>
+      </form>
+      <div class="checkout-result" id="checkoutResult" hidden><p class="eyebrow">ORDER RECEIVED</p><h3>DEMO CHECKOUT <em>COMPLETE</em></h3><p>No payment was processed or saved. Your details were cleared from this page.</p><button class="button button-dark" id="checkoutDone" type="button">Back to shop</button></div>
+    </section>
+    <div class="checkout-backdrop" id="checkoutBackdrop"></div>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>
